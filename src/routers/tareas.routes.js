@@ -2,7 +2,7 @@
 //     res.send('esta es una prueba de la peticion');
 // })
 import { Router } from "express";
-import { crearTarea, obtenerTareas, borrarTarea } from "../controllers/tareas.controllers";
+import { crearTarea, obtenerTareas, borrarTarea, editarTarea } from "../controllers/tareas.controllers";
 
 const router = Router();
 
@@ -18,7 +18,7 @@ router
   );
 router
   .route("/tareas/:id")
-  .delete(borrarTarea);
-//   .put(editarProducto)
+  .delete(borrarTarea)
+  .put(editarTarea)
 //   .get(obtenerProducto);
 export default router;
