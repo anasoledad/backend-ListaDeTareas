@@ -1,7 +1,6 @@
 {
   "name": "backend-listatareas",
   "version": "1.0.0",
-  "type": "module",
   "description": "backend de lista de tareas",
   "main": "index.js",
   "scripts": {
