@@ -1,10 +1,12 @@
 {
   "name": "backend-listatareas",
   "version": "1.0.0",
+  "type": "module",
   "description": "backend de lista de tareas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
   },
   "keywords": [],
   "author": "Ana Rocha",
