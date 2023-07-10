@@ -3,17 +3,18 @@
 // })
 import { Router } from "express";
 import { crearTarea, obtenerTareas, borrarTarea, editarTarea, obtenerTarea } from "../controllers/tareas.controllers";
+import { check } from "express-validator";
 
 const router = Router();
 
 router
   .route("/tareas").get(obtenerTareas)
   .post(
-//     [
-//       check("nombreProducto")
-//         .notEmpty()
-//         .withMessage("El nombre del producto es obligatorio"),
-//     ],
+    [
+      check("nombreTarea")
+        .notEmpty()
+        .withMessage("El nombre de la tarea es obligatorio"),
+    ],
     crearTarea
   );
 router
